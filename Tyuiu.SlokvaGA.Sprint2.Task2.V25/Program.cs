@@ -1,6 +1,6 @@
-﻿using Tyuiu.SlokvaGA.Sprint2.Task1.V27.Lib;
+﻿using Tyuiu.SlokvaGA.Sprint2.Task2.V25.Lib;
 
-namespace Tyuiu.SlokvaGA.Sprint2.Task1.V27
+namespace Tyuiu.SlokvaGA.Sprint2.Task2.V25
 {
     internal class Program
     {
@@ -11,9 +11,9 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task1.V27
             Console.Title = "Спринт #2 | Выполнил: Слоква Г. А. | ИСПб-25-1";
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* Спринт #2                                                              *");
-            Console.WriteLine("* Тема: Логические операции                                               *");
-            Console.WriteLine("* Задание #1                                                             *");
-            Console.WriteLine("* Вариант #27                                                            *");
+            Console.WriteLine("* Тема: Операции сравнения                                               *");
+            Console.WriteLine("* Задание #2                                                             *");
+            Console.WriteLine("* Вариант #25                                                            *");
             Console.WriteLine("* Выполнил: Слоква Г. А. | ИСПб-25-1                                     *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                               *");
@@ -29,25 +29,20 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task1.V27
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                       *");
             Console.WriteLine("**************************************************************************");
 
-            int a = 654;
-            int b = 325;
-            int c = 154;
-            int d = 333;
-            bool[] res = new bool[6];
-            res = ds.GetLogicOperations(a, b, c, d);
-            Console.WriteLine("a = " + a);
-            Console.WriteLine("b = " + b);
-            Console.WriteLine("c = " + c);
-            Console.WriteLine("d = " + d);
+            Console.WriteLine("Введите значение x: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите значение y: ");
+            int y = Convert.ToInt32(Console.ReadLine());
 
+            bool res = ds.CheckDotInShadedArea(x, y);
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                             *");
             Console.WriteLine("**************************************************************************");
 
-            for (int i = 0; i < 6; i++)
-            {
-                Console.WriteLine(res[i]);
-            }
+            if (res)
+                Console.WriteLine("Точка находиться в заштрихованной области");
+            else
+                Console.WriteLine("Точка не находиться в заштрихованной области");
             Console.ReadKey();
         }
     }
