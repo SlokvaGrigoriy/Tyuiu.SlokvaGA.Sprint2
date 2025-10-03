@@ -11,7 +11,7 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task4.V21.Test
             double x = 5;
             double y = 10;
             double res = ds.Calculate(x, y);
-            double wait = 87,08;
+            double wait = 0.312;
             Assert.AreEqual(wait, res);
         }
         [TestMethod]
@@ -21,7 +21,7 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task4.V21.Test
             double x = 10;
             double y = 5;
             double res = ds.Calculate(x, y);
-            double wait = 12;
+            double wait = 41.823;
             Assert.AreEqual(wait, res);
         }
     }
