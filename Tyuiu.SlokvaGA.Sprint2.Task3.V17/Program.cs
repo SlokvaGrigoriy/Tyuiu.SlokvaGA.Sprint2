@@ -8,7 +8,7 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task3.V17
         {
             DataService ds = new DataService();
 
-            Console.Title = "Спринт #2 | Выполнил: Слоква Г. А. | ИСПб-25-1"; 
+            Console.Title = "Спринт #2 | Выполнил: Слоква Г. А. | ИСПб-25-1";
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* Спринт #2                                                              *");
             Console.WriteLine("* Тема: Вложенные операторы if - else                                    *");
