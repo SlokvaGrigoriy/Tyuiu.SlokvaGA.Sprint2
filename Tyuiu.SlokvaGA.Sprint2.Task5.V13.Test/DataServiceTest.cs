@@ -12,19 +12,19 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task5.V13.Test
             int n = 5;
             int m = 6;
             int g = 2002;
-            Assert.AreEqual("6 Июнь 2002", ds.FindDateOfNextDay(g, m, n));
+            Assert.AreEqual("6 6 2002", ds.FindDateOfNextDay(g, m, n));
 
             // Тест 2: Конец месяца (30 июня 2002 -> 1 июля 2002)
-            Assert.AreEqual("1 Июль 2002", ds.FindDateOfNextDay(2002, 6, 30));
+            Assert.AreEqual("1 7 2002", ds.FindDateOfNextDay(2002, 6, 30));
 
             // Тест 3: Конец года (31 декабря 2002 -> 1 января 2003)
-            Assert.AreEqual("1 Январь 2003", ds.FindDateOfNextDay(2002, 12, 31));
+            Assert.AreEqual("1 1 2003", ds.FindDateOfNextDay(2002, 12, 31));
 
             // Тест 4: Февраль високосного года (28 февраля 2004 -> 29 февраля 2004)
-            Assert.AreEqual("29 Февраль 2004", ds.FindDateOfNextDay(2004, 2, 28));
+            Assert.AreEqual("29 2 2004", ds.FindDateOfNextDay(2004, 2, 28));
 
             // Тест 5: Конец февраля високосного года (29 февраля 2004 -> 1 марта 2004)
-            Assert.AreEqual("1 Март 2004", ds.FindDateOfNextDay(2004, 2, 29));
+            Assert.AreEqual("1 3 2004", ds.FindDateOfNextDay(2004, 2, 29));
 
             // Тесты на исключения
             Assert.ThrowsException<ArgumentException>(() =>
