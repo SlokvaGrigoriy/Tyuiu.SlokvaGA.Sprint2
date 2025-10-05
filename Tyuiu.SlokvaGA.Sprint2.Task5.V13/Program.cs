@@ -30,7 +30,7 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task5.V13
             Console.WriteLine("Введите номер месяца: ");
             int month = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите год: ");
-            int year = Convert.ToInt32(Console.ReadLine());
+            int year = Convert.ToInt32(Console.ReadLine()); 
             string res = ds.FindDateOfNextDay(year, month, date);
 
             Console.WriteLine("**************************************************************************");
