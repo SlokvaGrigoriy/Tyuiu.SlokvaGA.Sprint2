@@ -75,7 +75,7 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task5.V13.Lib
                 default: monthName = "Неизвестно"; break;
             }
 
-            return $"{nd}.{nm}.{ny}";
+            return $"{nd:D2}.{nm:D2}.{ny}";
         }
     }
 }
