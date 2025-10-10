@@ -8,13 +8,24 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task6.V14.Test
         public void FindDayName()
         {
             DataService ds = new DataService();
+
             int k = 1;
             int d = 2;
-            Assert.AreEqual("вторник", ds.FindDayName(k, d));
+            Assert.AreEqual("Вторник", ds.FindDayName(k, d));
 
             Assert.ThrowsException<ArgumentException>(() =>
             {
                 ds.FindDayName(0, 4);
+            });
+
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                ds.FindDayName(366, 3);
+            });
+
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                ds.FindDayName(-5, 1);
             });
         }
     }

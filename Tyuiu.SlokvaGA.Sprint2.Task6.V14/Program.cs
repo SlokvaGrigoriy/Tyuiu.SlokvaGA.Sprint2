@@ -26,17 +26,17 @@ namespace Tyuiu.SlokvaGA.Sprint2.Task6.V14
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                       *");
             Console.WriteLine("**************************************************************************");
 
-            Console.WriteLine("Введите день: ");
-            int date = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите номер месяца: ");
-            int month = Convert.ToInt32(Console.ReadLine());
-            string res = ds.FindDayName(month, date);
+            Console.WriteLine("Введите номер дня в году (k от 1 до 365): ");
+            int k = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите день недели 1 января (d от 1 до 7, где 1-пн, 2-вт, ..., 7-вс): ");
+            int d = Convert.ToInt32(Console.ReadLine());
+            string res = ds.FindDayName(d, k);
 
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                             *");
             Console.WriteLine("**************************************************************************");
 
-            Console.WriteLine("Следующий день: " + res);
+            Console.WriteLine("День недели: " + res);
             Console.ReadKey();
         }
     }
